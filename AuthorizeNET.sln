@@ -1,16 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizeNET", "Authorize.NET\AuthorizeNET.csproj", "{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizeNETtest", "AuthorizeNETtest\AuthorizeNETtest.csproj", "{CDA0D4D8-E4AA-4BEA-8839-04D69607D914}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7EBF48A1-8AC1-4E84-BDCC-E0984183D098}"
 	ProjectSection(SolutionItems) = preProject
 		AuthorizeNET.vsmdi = AuthorizeNET.vsmdi
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizeNET", "Authorize.NET\AuthorizeNET.csproj", "{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizeNET.Standard", "Authorize.NET\AuthorizeNET.Standard.csproj", "{6CEC3BAA-2E54-49F5-921E-1F624BA59A55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,21 +21,30 @@ Global
 		USELOCAL|Any CPU = USELOCAL|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.USELOCAL|Any CPU.ActiveCfg = Release|Any CPU
-		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.USELOCAL|Any CPU.Build.0 = Release|Any CPU
 		{CDA0D4D8-E4AA-4BEA-8839-04D69607D914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CDA0D4D8-E4AA-4BEA-8839-04D69607D914}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDA0D4D8-E4AA-4BEA-8839-04D69607D914}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDA0D4D8-E4AA-4BEA-8839-04D69607D914}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CDA0D4D8-E4AA-4BEA-8839-04D69607D914}.USELOCAL|Any CPU.ActiveCfg = Release|Any CPU
 		{CDA0D4D8-E4AA-4BEA-8839-04D69607D914}.USELOCAL|Any CPU.Build.0 = Release|Any CPU
+		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.USELOCAL|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D52EAEC-42FB-4313-83B8-69E2F55EBF14}.USELOCAL|Any CPU.Build.0 = Debug|Any CPU
+		{6CEC3BAA-2E54-49F5-921E-1F624BA59A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CEC3BAA-2E54-49F5-921E-1F624BA59A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CEC3BAA-2E54-49F5-921E-1F624BA59A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CEC3BAA-2E54-49F5-921E-1F624BA59A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CEC3BAA-2E54-49F5-921E-1F624BA59A55}.USELOCAL|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CEC3BAA-2E54-49F5-921E-1F624BA59A55}.USELOCAL|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2706FAD0-8792-463A-B68E-1D2989B4EA7B}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = AuthorizeNET.vsmdi

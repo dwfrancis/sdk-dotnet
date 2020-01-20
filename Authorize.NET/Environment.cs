@@ -1,8 +1,15 @@
 namespace AuthorizeNet 
 {
     using System;
+#if NETSTANDARD
+    using System.Collections.Concurrent;
+    using System.Collections.Generic;
+    using System.Collections.Specialized;
+#else
     using System.Configuration;
+#endif
     using System.Linq;
+
 
     /*================================================================================
     * 
@@ -118,6 +125,24 @@ namespace AuthorizeNet
 		    return value;
 	    }
 
+#if NETSTANDARD
+        private static readonly object SyncRoot = new object();
+        private static ConcurrentDictionary<string, string> _appSettings = new ConcurrentDictionary<string, string>();
+
+        public static void Init(IEnumerable<KeyValuePair<string, string>> appSettings)
+        {
+            lock (SyncRoot)
+            {
+                _appSettings = new ConcurrentDictionary<string, string>(appSettings);
+            }
+        }
+
+        public static void Init(NameValueCollection appSettings)
+        {
+            Init(appSettings.AllKeys.Select(p => new KeyValuePair<string, string>(p, appSettings.Get(p))));
+        }
+#endif
+
 	    /// <summary>
 	    /// Reads the value from property file and/or the environment 
 	    /// Values in property file supersede the values set in environmen
@@ -127,11 +152,15 @@ namespace AuthorizeNet
 	    public static String GetProperty(String propertyName) {
 		    String stringValue = null;
 
+#if NETSTANDARD
+            _appSettings.TryGetValue(propertyName, out var propValue);
+#else
 	        String propValue = null;
             if ( ConfigurationManager.AppSettings.AllKeys.Contains(propertyName))
 	        {
 	            propValue = ConfigurationManager.AppSettings[propertyName];
 	        }
+#endif
 
             var envValue = System.Environment.GetEnvironmentVariable(propertyName);
 		    if ( null != propValue && propValue.Trim().Length > 0 )
