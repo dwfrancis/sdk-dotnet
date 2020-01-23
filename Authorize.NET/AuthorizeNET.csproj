@@ -3,13 +3,15 @@
     <TargetFrameworks>netstandard2.0;net4.5</TargetFrameworks>
     <Title>Official .NET SDK for Authorize.Net</Title>
     <Company>Visa Inc</Company>
-    <Product>Official .NET SDK for Authorize.Net</Product>
+    <Product>Unofficial .NET Standard SDK for Authorize.Net</Product>
     <Copyright>Copyright © Visa Inc 2018</Copyright>
-    <Authors>Visa Inc</Authors>
+    <Authors>Visa Inc, David W. Francis</Authors>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <FileVersion>2.1.0.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>2.1.0</Version>
+    <PackageId>AuthorizeNET.Standard</PackageId>
+    <Description>A .net standard 2.0 fork of the official .NET SDK for Authorize.Net</Description>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Api\Controllers\createFingerPrintController.cs" />
